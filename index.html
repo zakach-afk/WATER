@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M & MS Plastic Water Tanks - Official Corporate Portal</title>
+    <style>
+        /* Premium Industrial-Corporate Theme Variables */
+        :root {
+            --primary-blue: #0b3c5d;     /* Deep Industrial Blue */
+            --accent-cyan: #328cc1;      /* Clean Water Cyan */
+            --dark-slate: #1d2731;       /* Dark Corporate Slate */
+            --bg-light: #f9fbfc;         /* Clean Light Grey Background */
+            --surface-card: #ffffff;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Premium Floating Navigation Bar */
+        nav {
+            background: rgba(11, 60, 93, 0.96);
+            backdrop-filter: blur(10px);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--accent-cyan);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Minimalist High-End Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0b3c5d 0%, #07273d 100%);
+            color: #ffffff;
+            padding: 120px 20px 150px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .fbr-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(50, 140, 193, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: #e0f2fe;
+            padding: 6px 18px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Structured Section */
+        .container {
+            max-width: 1200px;
+            margin: -60px auto 80px auto;
+            padding: 0 25px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Split Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Premium Corporate Cards */
+        .profile-card {
+            background: var(--surface-card);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(11, 60, 93, 0.06);
+            border-color: #cbd5e1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background-color: var(--accent-cyan);
+        }
+
+        /* Structured Enterprise Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .data-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 16px 0;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .data-table td {
+            text-align: right;
+            padding: 16px 0;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Custom Status Tags */
+        .badge-status {
+            background-color: #f0f9ff;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .address-box {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.6;
+            text-align: right;
+            display: inline-block;
+            max-width: 300px;
+        }
+
+        /* Compliance Framework Panel */
+        .compliance-panel {
+            background: var(--surface-card);
+            border-radius: 8px;
+            padding: 30px 40px;
+            margin-top: 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.01);
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .compliance-panel p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* Minimalist Modern Footer */
+        footer {
+            background-color: var(--dark-slate);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 100px;
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        footer .footer-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        footer p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Executive Top Navigation -->
+    <nav>
+        <div class="logo">M & MS <span>PLASTIC WATER TANKS</span></div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#registration">Statutory Profile</a></li>
+            <li><a href="#compliance">Regulatory Compliance</a></li>
+        </ul>
+    </nav>
+
+    <!-- High-Tier Branding Hero Section -->
+    <section class="hero" id="overview">
+        <div class="fbr-badge">
+            Official FBR Verified Taxpayer
+        </div>
+        <h1>M & MS PLASTIC WATER TANKS</h1>
+        <p>Premium quality manufacturing solutions built on compliance, structural integrity, and absolute corporate transparency.</p>
+    </section>
+
+    <!-- Core Dynamic Container -->
+    <div class="container" id="registration">
+        <div class="grid">
+            
+            <!-- Left Card: Registration Identity -->
+            <div class="profile-card">
+                <div class="card-title">Corporate Registration</div>
+                <table class="data-table">
+                    <tr>
+                        <th>Business Name</th>
+                        <td style="color: var(--primary-blue);">M & MS PLASTIC WATER TANKS</td>
+                    </tr>
+                    <tr>
+                        <th>Registration No.</th>
+                        <td>1282335</td>
+                    </tr>
+                    <tr>
+                        <th>Incorporation No.</th>
+                        <td>9438938</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Registration</th>
+                        <td>25-April-2025</td>
+                    </tr>
+                    <tr>
+                        <th>Incorporation Date</th>
+                        <td>25-April-2025</td>
+                    </tr>
+                    <tr>
+                        <th>Type of Person</th>
+                        <td><span class="badge-status">Company</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Right Card: Operations & Location Registry -->
+            <div class="profile-card">
+                <div class="card-title">Taxation & Location Registry</div>
+                <table class="data-table">
+                    <tr>
+                        <th>Activity Type</th>
+                        <td><span class="badge-status" style="background-color: #fef3c7; color: #92400e; border-color: #fde68a;">Business</span></td>
+                    </tr>
+                    <tr>
+                        <th>Principal Tax Office</th>
+                        <td>RTO Lahore</td>
+                    </tr>
+                    <tr>
+                        <th>Registered Address</th>
+                        <td>
+                            <span class="address-box">
+                                Plot D-5-6 Small Industries Estate Lahore Road Sargodha, 40100 Pakistan
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- Official Compliance Panel -->
+        <div class="compliance-panel" id="compliance">
+            <p><strong>Regulatory Compliance Notice:</strong> The infrastructure parameters and organizational data displayed above are verified in strict accordance with the official Taxpayer Registration Certificate issued under Section 181C of the Income Tax Ordinance 2001 by the Federal Board of Revenue (FBR), Government of Pakistan.</p>
+        </div>
+    </div>
+
+    <!-- Executive Footer -->
+    <footer>
+        <div class="footer-logo">M & MS PLASTIC WATER TANKS</div>
+        <p>Registered Office: Plot D-5-6 Small Industries Estate Lahore Road Sargodha, Pakistan.</p>
+        <p style="margin-top: 20px; color: #475569;">&copy; 2026 M & MS Plastic Water Tanks. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
